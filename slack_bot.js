@@ -73,7 +73,12 @@ var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 
 var controller = Botkit.slackbot({
-    debug: true,
+    debug: false,
+    port: 3000,
+    hostname: node.imperialrome.city,
+    clientId: process.env.clientId,
+    clientSecret: procss.env.clientSecret,
+    scopes: ['bot'],
 });
 
 var bot = controller.spawn({
